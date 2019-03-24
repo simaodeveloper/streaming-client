@@ -6,7 +6,7 @@
   "scripts": {
     "clear:server": "rm -rf ../server/public/**",
     "clear:dist": "rm -rf ./dist",
-    "start": "npm run clear:dist && webpack-dev-server --mode development --open",
+    "start": "npm run clear:dist && cross-env NODE_ENV=development webpack-dev-server --mode development --open",
     "build": "npm run clear:server && cross-env NODE_ENV=production webpack --mode production",
     "test": "jest",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
